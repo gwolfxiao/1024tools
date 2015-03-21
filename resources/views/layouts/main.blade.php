@@ -150,7 +150,7 @@
 					<li class="dropdown" onmouseover="this.className='dropdown open'" onmouseout="this.className='dropdown'">
 						<a href="javascript:" class="dropdown-toggle">#1024<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="mailto:dev@1024tools.com">bug/建议提交</a></li>
+							<li><a href="https://github.com/cnxh/1024tools/issues/new" target="_blank">bug/建议提交</a></li>
 						</ul>
 					</li>
 				</ul>
