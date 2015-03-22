@@ -2,7 +2,7 @@
 
 use View;
 use Input;
-use ToolsException;
+use App\Exceptions\Exception as ToolsException;
 
 class EncryptController extends Controller {
 

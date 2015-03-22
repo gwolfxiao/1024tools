@@ -58,4 +58,5 @@ Route::get('/http-status-code', ['uses' => 'ManualController@getHttpStatusCode',
 
 // ExtraController
 Route::get('/random', ['uses' => 'ExtraController@getRandom', 'as' => 'extra.random']);
-Route::get('/regex', ['uses' => 'ExtraController@getRegex', 'as' => 'extra.regex']);
+Route::get('/uuid', ['uses' => 'ExtraController@getUuid', 'as' => 'extra.uuid']);
+Route::post('/uuid', ['uses' => 'ExtraController@postUuid', 'as' => 'extra.uuid.post']);

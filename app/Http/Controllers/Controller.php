@@ -1,8 +1,9 @@
 <?php namespace App\Http\Controllers;
 
+use Exception;
 use Validator;
 use App\Support\ApiResponse;
-use App\Exception\Exception as ToolsException;
+use App\Exceptions\ToolsException;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -17,8 +18,7 @@ abstract class Controller extends BaseController {
 	protected function validate($data = array(), $rules = array())
 	{
 		$validator = Validator::make($data, $rules);
-		if ($validator->fails())
-		{
+		if ($validator->fails()) {
 			throw new ToolsException($validator->messages()->first(), ToolsException::CODE_BAD_PARAMS);
 		}
 	}
