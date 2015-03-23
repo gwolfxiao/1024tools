@@ -58,7 +58,11 @@
 	$("#uuid-generate").click(function(e){
 		var num = parseInt($('#uuid-num').val(), 10),
 			result = '';
-		if (num > 10) { //限制最多生成10组
+		if (num < 1) { //限制最少1组
+			$('#uuid-num').val('1');
+			num = 1;
+		}
+		if (num > 10) { //限制最多10组
 			$('#uuid-num').val('10');
 			num = 10;
 		}
