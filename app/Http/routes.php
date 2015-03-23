@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/robots.txt', function(){});
-
 // SiteController
 Route::get('/', ['uses' => 'SiteController@getHome', 'as' => 'site.home']);
 Route::get('/site/captcha', ['uses' => 'SiteController@getCaptcha', 'as' => 'site.captcha']);
