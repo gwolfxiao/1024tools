@@ -19,7 +19,7 @@
 	<![endif]-->
 	<script type="text/javascript">
 		var site_config = {
-			"tools_version": "0.0.7"
+			"tools_version": "0.0.8"
 		};
 	</script>
 	@yield('header')
@@ -78,6 +78,7 @@
 											<li><a href="{{{URL::route('http.ip')}}}">IP地址查询</a></li>
 											<li><a href="{{{URL::route('http.header')}}}">HTTP头查看</a></li>
 											<li><a href="{{{URL::route('extra.random')}}}">随机数/密码生成</a></li>
+											<li><a href="{{{URL::route('extra.uuid')}}}">UUID生成</a></li>
 										</ul>
 									</div>
 								</div>
@@ -137,6 +138,7 @@
 							<li><a href="{{{URL::route('http.ip')}}}">IP地址查询</a></li>
 							<li><a href="{{{URL::route('http.header')}}}">HTTP头查看</a></li>
 							<li><a href="{{{URL::route('extra.random')}}}">随机数/密码生成</a></li>
+							<li><a href="{{{URL::route('extra.uuid')}}}">UUID生成</a></li>
 						</ul>
 					</li>
 				</ul>
