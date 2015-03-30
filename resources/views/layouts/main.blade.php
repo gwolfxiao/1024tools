@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="dev@1024tools.com">
-	<title>@yield('pageTitle', '1024tools') - 1024程序员在线开发工具箱</title>
+	<title>@yield('pageTitle', '1024tools') - {{ trans('site.name') }}</title>
 	<script src="{{statics_path()}}/libs/pace/1.0.0/pace.min.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico" /> 
 	<link rel="apple-touch-icon" href="{{statics_path()}}/images/icon_192.png" />
@@ -152,7 +152,7 @@
 					<li class="dropdown" onmouseover="this.className='dropdown open'" onmouseout="this.className='dropdown'">
 						<a href="javascript:" class="dropdown-toggle">#1024<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="https://github.com/cnxh/1024tools/issues/new" target="_blank">bug/建议提交</a></li>
+							<li><a href="https://github.com/cnxh/1024tools/issues" target="_blank">bug/建议提交</a></li>
 						</ul>
 					</li>
 				</ul>

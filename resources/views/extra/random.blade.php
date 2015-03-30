@@ -1,9 +1,9 @@
 @extends('layouts/main')
-@section('pageTitle', '随机数生成、随机字符串生成、random、密码生成器')
+@section('pageTitle', trans('random.page.title'))
 
 @section('content')
 <div class="row ttitle">
-	<div class="col-xs-12 col-sm-10"><h3>随机数生成、随机字符串生成、random、密码生成器</h3></div>
+	<div class="col-xs-12 col-sm-10"><h3>{{ trans('random.page.title') }}</h3></div>
 	<div class="col-xs-12 col-sm-2">
 		<dl class="list-unstyled pull-right">
 		</dl>
@@ -13,60 +13,60 @@
 	<form class="form-horizontal">
 		<div class="form-group">
 			<p class="bg-success text-success">
-				该功能由JS在本地完成，您的任何输入都不会提交到服务端。
+				{{ trans('random.page.tips') }}
 			</p>
 		</div>
 		<div class="form-group clearfix">
-				<label class="control-label col-sm-2">生成数量：</label>
+				<label class="control-label col-sm-2">{{ trans('random.page.numbers') }}</label>
 				<div class="col-sm-2">
-					<input type="number" class="form-control" id="random-num" value="5" placeholder="生成多少组结果">
+					<input type="number" class="form-control" id="random-num" value="5" placeholder="{{ trans('random.page.numbers_placeholder') }}">
 				</div>
 		</div>
 		<div class="form-group clearfix">
-				<label class="control-label col-sm-2">长度：</label>
+				<label class="control-label col-sm-2">{{ trans('random.page.length')}}</label>
 				<div class="col-sm-10 form-inline">
-					<input type="number" class="form-control" id="random-len-from" value="16" placeholder="最小多少位">
+					<input type="number" class="form-control" id="random-len-from" value="16" placeholder="{{ trans('random.page.length_placeholder_min')}}">
 						~
-					<input type="number" class="form-control" id="random-len-to" value="20" placeholder="最长多少位">
+					<input type="number" class="form-control" id="random-len-to" value="20" placeholder="{{ trans('random.page.length_placeholder_max')}}">
 				</div>
 		</div>
 		<div class="form-group">
-			<label class="control-label col-sm-2">使用字符集：</label>
+			<label class="control-label col-sm-2">{{ trans('random.page.charset') }}</label>
 			<div class="col-sm-10" id="random-charset">
 				<input type="text" class="form-control" value="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()_+" spellcheck="false"/>
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" value="0123456789" checked="checked">
-						数字 0123456789
+						{{ trans('random.page.charset_numbers') }} 0123456789
 					</label>
 				</div>
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" value="abcdefghijklmnopqrstuvwxyz" checked="checked">
-						小写字母 abcdefghijklmnopqrstuvwxyz
+						{{ trans('random.page.charset_lowcase_letters') }} abcdefghijklmnopqrstuvwxyz
 					</label>
 				</div>
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ" checked='checked'>
-						大写字母 ABCDEFGHIJKLMNOPQRSTUVWXYZ
+						{{ trans('random.page.charset_upcase_letters') }} ABCDEFGHIJKLMNOPQRSTUVWXYZ
 					</label>
 				</div>
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" value="~!@#$%^&*()_+" checked='checked'>
-						常用符号 ~!@#$%^&*()_+
+						{{ trans('random.page.charset_symbols') }} ~!@#$%^&*()_+
 					</label>
 				</div>
 			</div>
 		</div>
 		<div class="form-group clearfix">
 			<div class="col-sm-10 col-sm-offset-2">
-			<button type="button" class="btn btn-primary" id="random-generate" autofocus="autofocus">生成</button>
+			<button type="button" class="btn btn-primary" id="random-generate" autofocus="autofocus">{{ trans('random.page.submit') }}</button>
 			</div>
 		</div>
 		<div class="form-group" id="random-result">
-			<label class="control-label col-sm-2">结果：</label>
+			<label class="control-label col-sm-2">{{ trans('random.page.result') }}</label>
 			<div class="col-sm-10">
 				<textarea class="form-control" rows="6" spellcheck="false"></textarea>
 			</div>
