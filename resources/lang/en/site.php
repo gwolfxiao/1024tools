@@ -1,7 +1,7 @@
 <?php
 
 return [
-	'name' => '1024Tools',
+    'name' => '1024Tools',
 
-	'bug_report' => 'bug report',
+    'bug_report' => 'bug report',
 ];
