@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Support;
+namespace App\Support;
 
 use Input;
 use Response;

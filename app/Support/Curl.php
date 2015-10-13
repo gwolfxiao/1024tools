@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Support;
+namespace App\Support;
 
 class Curl extends \Curl\Curl
 {

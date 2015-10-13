@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Support;
+namespace App\Support;
 
 use Closure;
 use Cache as BaseCache;
