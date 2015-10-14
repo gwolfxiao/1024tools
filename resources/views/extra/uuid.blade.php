@@ -41,7 +41,7 @@
 <div class="row">
 	<div class="col-xs-12">
 		<span class="powerby">
-			uuid在线生成使用 @<a href="https://github.com/ramsey/uuid" target="_blank">rhumsaa/uuid</a> 实现
+			uuid在线生成使用 @<a href="https://github.com/ramsey/uuid" target="_blank">ramsey//uuid</a> 实现
 		</span>
 	</div>
 </div>
@@ -83,6 +83,10 @@
 		});
 		e.preventDefault();
 		return false;
+	});
+
+	$(document).ready(function(){
+		$('#uuid-generate').trigger('click');
 	});
 
 	function showmsg(type, msg) {

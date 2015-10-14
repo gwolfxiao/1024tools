@@ -98,7 +98,11 @@
 			charset += checked[i].value
 		};
 		$('#random-charset :text').val(charset)
-	})
+	});
+
+	$(document).ready(function(){
+		$('#random-generate').trigger('click');
+	});
 
 	function generateOne(charset, lenfrom, lento) {
 		var result = '';

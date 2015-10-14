@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use View;
 use Input;
-use Rhumsaa\Uuid\Uuid;
+use Ramsey\Uuid\Uuid;
 use App\Support\ApiResponse;
 use App\Exceptions\ToolsException;
 
