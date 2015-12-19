@@ -6,7 +6,7 @@ use View;
 use Input;
 use Request;
 use Response;
-use App\Models\Tools;
+use App\Models\Tool;
 use App\Support\Cache;
 use Gregwar\Captcha\CaptchaBuilder;
 
@@ -19,7 +19,7 @@ class SiteController extends Controller
      */
     public function getHome()
     {
-        $tools = Tools::statusOk()->get();
+        $tools = Tool::statusOk()->get();
 
         return view('site.index', compact('tools'));
     }
@@ -62,7 +62,7 @@ class SiteController extends Controller
         $cacheKey = 'site.ajax.tools';
         $expireMinite = 3;
         $tools = Cache::get($cacheKey, $expireMinite, function () {
-            $tools = Tools::statusOk()->get(['name', 'route', 'description'])->toArray();
+            $tools = Tool::statusOk()->get(['name', 'route', 'description'])->toArray();
             array_walk($tools, function (&$v, $k) {
                 $v['url'] = route($v['route'], [], false);
                 unset($v['route']);

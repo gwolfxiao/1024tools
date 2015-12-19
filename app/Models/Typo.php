@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Typo extends Model
 {
-    public $table = 'typo';
+    public $table = 'typos';
 
     protected function getRoute($typo)
     {

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tools extends Model
+class Tool extends Model
 {
     const STATUS_NO = 0;
     const STATUS_OK = 1;
