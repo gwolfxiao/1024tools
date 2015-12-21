@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
+use App\Models\Typo;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -44,6 +45,12 @@ class Handler extends ExceptionHandler
     {
         if ($e instanceof ModelNotFoundException) {
             $e = new NotFoundHttpException($e->getMessage(), $e);
+        }
+
+        if ($e instanceof NotFoundHttpException) {
+            if ($route = Typo::getRoute($request->path())) {
+                return redirect()->route($route);
+            }
         }
 
         if ($e instanceof HttpException) {
