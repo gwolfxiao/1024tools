@@ -26,6 +26,7 @@
 </head>
 <body id="body" class="@yield('bodyClass', '')">
 	<noscript><div class="noscript"></div></noscript>
+
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -152,6 +153,7 @@
 					<li class="dropdown" onmouseover="this.className='dropdown open'" onmouseout="this.className='dropdown'">
 						<a href="javascript:" class="dropdown-toggle">#1024<span class="caret"></span></a>
 						<ul class="dropdown-menu">
+							<li><a href="https://github.com/cnxh/1024tools" target="_blank">Fork me on Github !</a></li>
 							<li><a href="https://github.com/cnxh/1024tools/issues" target="_blank">bug/建议提交</a></li>
 						</ul>
 					</li>
@@ -183,6 +185,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
+
 </div>
 </body>
 
