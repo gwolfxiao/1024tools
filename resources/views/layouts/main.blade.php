@@ -19,7 +19,7 @@
 	<![endif]-->
 	<script type="text/javascript">
 		var site_config = {
-			"tools_version": "0.0.8"
+			"tools_version": "0.0.9"
 		};
 	</script>
 	@yield('header')
