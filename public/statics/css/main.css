@@ -241,6 +241,9 @@ p.bg-primary, p.bg-warning, p.bg-info, p.bg-success, p.bg-danger {
 /* less */
 .tools-less .editor {height: 400px;}
 
+/* less */
+.tools-unserialize .editor {height: 400px;}
+
 /* xmljson */
 .tools-xmljson .editor {height: 400px;}
 

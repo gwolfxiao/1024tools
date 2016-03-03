@@ -10,7 +10,7 @@
 	<link rel="shortcut icon" href="/favicon.ico" /> 
 	<link rel="apple-touch-icon" href="{{statics_path()}}/images/icon_192.png" />
 	<link rel="stylesheet" href="{{statics_path()}}/libs/bootstrap/customize/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="{{statics_path()}}/css/main.css?20150206" />
+	<link rel="stylesheet" href="{{statics_path()}}/css/main.css?20160303" />
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="{{{URL::route('site.browserDetect')}}}"></script>
@@ -54,6 +54,7 @@
 											<li><a href="{{{URL::route('convert.xmljson')}}}">XML/JSON互转</a></li>
 											<li><a href="{{{URL::route('convert.less')}}}">LESS转CSS</a></li>
 											<li><a href="{{{URL::route('convert.timestamp')}}}">UNIX时间戳转换</a></li>
+											<li><a href="{{{URL::route('convert.unserialize')}}}">PHP反序列化</a></li>
 											<li class="divider"></li>
 											<li class="dropdown-header">加解密/HASH：</li>
 											<li><a href="{{{URL::route('encrypt.hash')}}}">HASH计算/MD5/SHA1</a></li>
@@ -102,6 +103,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="{{{URL::route('convert.base64')}}}">Base64编码解码</a></li>
 							<li><a href="{{{URL::route('convert.urlencode')}}}">Url编码解码</a></li>
+							<li><a href="{{{URL::route('convert.unserialize')}}}">PHP反序列化</a></li>
 							<li class="divider"></li>
 							<li><a href="{{{URL::route('convert.markdown')}}}">Markdown转HTML</a></li>
 							<li><a href="{{{URL::route('convert.xmljson')}}}">XML/JSON互转</a></li>

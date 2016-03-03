@@ -27,6 +27,8 @@ Route::post('/less', ['uses' => 'ConvertController@postLess', 'as' => 'convert.l
 Route::get('/xmljson', ['uses' => 'ConvertController@getXmlJson', 'as' => 'convert.xmljson']);
 Route::get('/markdown', ['uses' => 'ConvertController@getMarkdown', 'as' => 'convert.markdown']);
 Route::get('/timestamp', ['uses' => 'ConvertController@getTimestamp', 'as' => 'convert.timestamp']);
+Route::get('/unserialize', ['uses' => 'ConvertController@getUnserialize', 'as' => 'convert.unserialize']);
+Route::post('/unserialize', ['uses' => 'ConvertController@postUnserialize', 'as' => 'convert.unserialize.post']);
 
 // FormatController
 Route::get('/json', ['uses' => 'FormatController@getJson', 'as' => 'format.json']);

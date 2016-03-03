@@ -125,4 +125,21 @@ class ConvertController extends Controller
     {
         return View::make('convert.timestamp');
     }
+
+    public function getUnserialize()
+    {
+        return view('convert.unserialize');
+    }
+
+    public function postUnserialize()
+    {
+        $query = Input::get('query');
+        try {
+            if (false !== ($result = unserialize($query))) {
+                return $this->success(print_r($result, true));
+            }
+        } catch (Exception $e) {}
+        return $this->error('输入错误，该字符串无法反序列化');
+        
+    }
 }
