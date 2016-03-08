@@ -31,12 +31,16 @@
 			<button type="submit" class="btn btn-primary">计算</button>
 			@if (isset($result))
 			<div class="form-group mt10 clearfix">
-				<label for="result" class="control-label">结果：</label>
-				{!! Form::textarea('result', $result, ['class' => 'form-control', 'id' => 'result', 'rows' => 3, 'spellcheck' => "false"]) !!}
+				<label for="result" class="control-label">结果A：</label>
+				{!! Form::textarea('result', $result, ['class' => 'form-control', 'id' => 'result', 'rows' => 2, 'spellcheck' => "false"]) !!}
 			</div>
 			<div class="form-group mt10 clearfix">
-				<label for="result" class="control-label">结果（按utf-8编码base64）：</label>
-				{!! Form::textarea('result', base64_encode($result), ['class' => 'form-control', 'id' => 'result_base64', 'rows' => 3, 'spellcheck' => "false"]) !!}
+				<label for="result" class="control-label">结果A':（对上面的"结果A"进行base64编码）</label>
+				{!! Form::textarea('result', base64_encode($result), ['class' => 'form-control', 'id' => 'result_base64', 'rows' => 2, 'spellcheck' => "false"]) !!}
+			</div>
+			<div class="form-group mt10 clearfix">
+				<label for="result" class="control-label">结果B:（hmac计算返回原始二进制数据后进行base64编码）</label>
+				{!! Form::textarea('result', $rawResult, ['class' => 'form-control', 'id' => 'result_base64', 'rows' => 2, 'spellcheck' => "false"]) !!}
 			</div>
 			@endif
 		</form>
@@ -48,6 +52,7 @@
 		<ol>
 			<li>HMAC (Hash-based message authentication code) 常用于接口签名验证</li>
 			<li>支持的算法有 {{implode('、', $algos)}} </li>
+			<li>结果B为hmac计算返回原始二进制数据后进行base64编码后得到的值</li>
 		</ol>
 	</div>
 </div>

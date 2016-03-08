@@ -36,8 +36,9 @@ class EncryptController extends Controller
             throw new ToolsException('不支持该算法', ToolsException::CODE_BAD_PARAMS);
         }
         $result = hash_hmac($input['algo'], $input['query'], $input['key']);
+        $rawResult = base64_encode(hash_hmac($input['algo'], $input['query'], $input['key'], true));
 
-        return View::make('encrypt.hmac', array_merge(compact('algos', 'result'), $input));
+        return View::make('encrypt.hmac', array_merge(compact('algos', 'result', 'rawResult'), $input));
     }
 
     private function getSortedHashAlgos()
