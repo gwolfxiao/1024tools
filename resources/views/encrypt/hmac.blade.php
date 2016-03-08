@@ -52,7 +52,6 @@
 		<ol>
 			<li>HMAC (Hash-based message authentication code) 常用于接口签名验证</li>
 			<li>支持的算法有 {{implode('、', $algos)}} </li>
-			<li>结果B为hmac计算返回原始二进制数据后进行base64编码后得到的值</li>
 		</ol>
 	</div>
 </div>
